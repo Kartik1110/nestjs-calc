@@ -17,11 +17,6 @@ export class CalcController {
     const result = this.calcService.calculateExpression(calcBody);
 
     if (result === 'Invalid expression') {
-      // return {
-      //   status: 400,
-      //   message: 'Invalid expression provided',
-      //   error: 'Bad Request',
-      // };
       throw new HttpException(
         {
           statusCode: HttpStatus.BAD_REQUEST,
